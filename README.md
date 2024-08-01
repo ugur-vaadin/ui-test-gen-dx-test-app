@@ -1,7 +1,4 @@
-# Custom project from Hilla
-
-This project can be used as a starting point to create your own Hilla application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+# Copilot UI Test Generator Plugin DX Tests App
 
 ## Running the application
 
@@ -10,42 +7,39 @@ type `mvnw` (Windows), or `./mvnw` (Mac & Linux), then open
 http://localhost:8080 in your browser.
 
 You can also import the project to your IDE of choice as you would with any
-Maven project.
+Maven project. Read more on [how to import Vaadin projects to different
+IDEs](https://vaadin.com/docs/latest/guide/step-by-step/importing) (Eclipse, IntelliJ IDEA, NetBeans, and VS Code).
 
-## Deploying to Production
+## DX Test Structure
 
-To create a production build, call `mvnw clean package -Pproduction` (Windows),
-or `./mvnw clean package -Pproduction` (Mac & Linux).
-This will build a JAR file with all the dependencies and front-end resources,
-ready to be deployed. The file can be found in the `target` folder after the build completes.
+The test session consists of the following tasks.
+Please see comments in the code for descriptions.
 
-Once the JAR file is built, you can run it using
-`java -jar target/myapp-1.0-SNAPSHOT.jar` (NOTE, replace
-`myapp-1.0-SNAPSHOT.jar` with the name of your jar).
+### 1. Generate UI tests for a Flow view
 
-## Project structure
+1. Activate Copilot
+2. Utilizing the copilot panel, generate UI tests for any Flow view
 
-<table style="width:100%; text-align: left;">
-  <tr><th>Directory</th><th>Description</th></tr>
-  <tr><td><code>src/main/frontend/</code></td><td>Client-side source directory</td></tr>
-  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>index.html</code></td><td>HTML template</td></tr>
-  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>index.ts</code></td><td>Frontend 
-entrypoint, bootstraps a React application</td></tr>
-  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>routes.tsx</code></td><td>React Router routes definition</td></tr>
-  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>MainLayout.tsx</code></td><td>Main 
-layout component, contains the navigation menu, uses <a href="https://hilla.dev/docs/react/components/app-layout">
-App Layout</a></td></tr>
-  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>views/</code></td><td>UI view 
-components</td></tr>
-  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>themes/</code></td><td>Custom  
-CSS styles</td></tr>
-  <tr><td><code>src/main/java/&lt;groupId&gt;/</code></td><td>Server-side 
-source directory, contains the server-side Java views</td></tr>
-  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>Application.java</code></td><td>Server entry-point</td></tr>
-</table>
+### 2. Examine and run the generated tests
 
-## Useful links
+1. Use the generated link to navigate to the test class
+2. Examine the test code and project modifications
+3. Fix any compilation errors
+4. Run the generated integration tests
+5. Examine the test results
 
-- Read the documentation at [hilla.dev/docs](https://hilla.dev/docs/).
-- Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/hilla) or join our [Discord channel](https://discord.gg/MYFq5RTbBn).
-- Report issues, create pull requests in [GitHub](https://github.com/vaadin/hilla).
+### 3. Generate UI tests for a Hilla React view
+
+1. Utilizing the copilot panel, generate UI tests for any Hilla React view
+
+### 4. Examine and run the generated tests
+
+1. Use the generated link to navigate to the test class
+2. Examine the test code and project modifications
+3. Fix any compilation errors
+4. Run the generated integration tests
+5. Examine the test results
+
+## Documentation
+
+- [UI test generator plugin (not final)](https://docs.google.com/document/d/1PVnUPsLTBwLpxyC24SVB1SR1LWNEKUJq-1lUiNcZwQs/edit#heading=h.w4xsmg2z4fca)
