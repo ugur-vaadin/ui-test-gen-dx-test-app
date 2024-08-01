@@ -1,0 +1,23 @@
+vaadin-vertical-layout.person-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+  margin-bottom: 100px;
+}
+
+vaadin-vertical-layout.person-form > * {
+  width: 100%;
+}
+
+vaadin-vertical-layout.person-form h2 {
+  margin: 50px 0 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+vaadin-vertical-layout.person-form vaadin-horizontal-layout > * {
+  flex: 1 1;
+}
+
+vaadin-vertical-layout.person-form vaadin-vertical-layout > * {
+  width: 100%;
+}
