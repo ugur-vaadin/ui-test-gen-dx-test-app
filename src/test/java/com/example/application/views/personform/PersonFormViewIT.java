@@ -18,7 +18,7 @@ public class PersonFormViewIT {
 
   @BeforeEach
   public void setup() {
-    page = Playwright.create().chromium().launch(new BrowserType.LaunchOptions().setHeadless(false)).newContext().newPage();
+    page = Playwright.create().chromium().launch(new BrowserType.LaunchOptions().setHeadless(!Boolean.getBoolean("headed"))).newContext().newPage();
     page.setDefaultTimeout(4000);
     page.navigate("http://localhost:8080/person-form");
   }
