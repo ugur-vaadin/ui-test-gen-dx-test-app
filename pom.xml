@@ -205,5 +205,46 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>it</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>verify</goal>
+                                </goals>
+                                <configuration>
+                                    <trimStackTrace>false</trimStackTrace>
+                                    <enableAssertions>true</enableAssertions>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <executions>
+                            <execution>
+                                <id>run hilla tests</id>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <phase>integration-test</phase>
+                                <configuration>
+                                    <executable>npm</executable>
+                                    <arguments>
+                                        <argument>test</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 </project>

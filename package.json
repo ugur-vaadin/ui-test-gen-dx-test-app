@@ -34,9 +34,11 @@
   },
   "devDependencies": {
     "@babel/preset-react": "7.24.7",
+    "@playwright/test": "latest",
     "@preact/signals-react-transform": "0.4.0",
     "@rollup/plugin-replace": "5.0.7",
     "@rollup/pluginutils": "5.1.0",
+    "@types/node": "latest",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "@vaadin/hilla-generator-cli": "24.5.0-alpha9",
@@ -167,5 +169,8 @@
     "@vaadin/vaadin-lumo-styles": "$@vaadin/vaadin-lumo-styles",
     "@vaadin/vaadin-material-styles": "$@vaadin/vaadin-material-styles",
     "@vaadin/popover": "$@vaadin/popover"
+  },
+  "scripts": {
+    "test": "npx playwright install chromium && npx playwright test"
   }
 }
