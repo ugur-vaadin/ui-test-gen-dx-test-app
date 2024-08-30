@@ -12,7 +12,7 @@
         <vaadin.copilot.enable>true</vaadin.copilot.enable>
         <vaadin.test.makeReferenceScreenshots>false</vaadin.test.makeReferenceScreenshots>
         <vaadin.copilot.version>24.5-SNAPSHOT</vaadin.copilot.version>
-        <ui.tests.version>1.0.0.alpha3</ui.tests.version>
+        <ui.tests.version>1.0.0.alpha5</ui.tests.version>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
